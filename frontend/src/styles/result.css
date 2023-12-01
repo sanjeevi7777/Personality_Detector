@@ -1,0 +1,80 @@
+/* result.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+.bar{
+    width: 400;
+    height: 400;
+}
+/* Main container for layout */
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to a new line on smaller screens */
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* Styles for the chart container */
+.chart-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top:20px;
+    min-height: 300px; /* Set a minimum height to prevent collapsing on small content */
+    height: '100%';
+    
+    border-radius: 10px; /* Add rounded corners */
+    flex: 1; /* Allow chart to take up remaining space on the left side */
+}
+
+/* SVG container styles */
+.svg-heading-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow container to take up remaining space on the right side */
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: 0px; /* Add some spacing from the previous element */
+}
+
+/* Styles for the assessment heading */
+.assessment-heading {
+    text-align: center;
+    padding: 1px 0; /* Increase top and bottom padding for better spacing */
+    font-weight: 600;
+    font-size: 1.2rem; /* Adjust font size for better readability */
+    flex: 1; /* Allow heading to take up remaining space on the right side */
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .chart-container,
+    .svg-heading-container,
+    .svg-container,
+    .assessment-heading {
+        flex: auto; /* Allow all elements to take up available space on smaller screens */
+    }
+
+    .chart-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 10px; /* Adjust margins for better spacing */
+    }
+
+    .svg-container {
+        margin-top: 10px;
+    }
+}
